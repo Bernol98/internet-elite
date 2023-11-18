@@ -435,6 +435,7 @@
        padding-left: 15px;
        margin-right: auto;
        margin-left: auto;
+       margin-top: -2%;
    }
    
    @media (min-width: 576px) {
@@ -9295,24 +9296,71 @@
        padding: 10% 7%;
    }
    footer {
-    background-color: #1f1f1f; /* Szare tło */
+    background-color: #1f1f1f;
     padding: 20px;
     text-align: center;
-}
-footer p  {
-    font-size: x-small;
-    margin-bottom: -3vh;
-}
-footer li{
-    display: inline;
-    margin-right: 20vh;
-    margin-left: 20vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-}
-footer img {
+  .footer2 p {
+    margin-top: 1%;
+    width: 50%;
+    font-size: x-small;
+    margin-left: 25%;
+  }
+  .footer2 {
+    height: 20px;
+    border-top: solid 0.5px gray;
+    width: 100%;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+
+  footer nav {
+    flex: 1;
+    text-align: right;
+  }
+
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer li {
+    display: inline;
+    margin-right: 20px;
+    color: #fff;
+  }
+
+  footer img {
     float: left;
-    margin-right: 5px; /* Dodatkowy margines dla logo */
-}
+    margin-right: 5px;
+  }
+
+  /* Ostylowanie przycisku */
+  .styled-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #ffd700;
+    color: #fff;
+    background-color: #ffd700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Zmiana stylu przycisku po najechaniu myszką */
+  .styled-button:hover {
+    background-color: #fff;
+    color: #ffd700;
+  }
    
    @media (min-width: 768px) {
    .block-3 .text {
@@ -9774,4 +9822,12 @@ footer img {
         transition: 0.5s;
     }
 
+  }
+  @media (max-width: 768px){
+    .desktop-menu{
+        display: none;
+    }
+  }
+  .tel {
+    float: left;
   }
