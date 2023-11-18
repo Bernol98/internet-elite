@@ -9264,7 +9264,7 @@
    .block-3 .image {
        width: 60%;
        height: 70%;
-       padding: 10% 7%;
+       padding: 20% 7%;
    }
    }
    .block-3 .image .icon {
@@ -9288,7 +9288,7 @@
        color: #fff;
    }
    .block-3 .image:hover .icon {
-       opacity: 1;
+       visibility: hidden;
    }
    .block-3 .text {
        width: 100%;
@@ -9631,11 +9631,14 @@ footer img {
    }
    }
    .middle {
-    margin-top: 25%;
+    margin-top: 35vh;
        position: absolute;
        top: 6%;
        left: 50%;
        transform: translate(-50%, -50%);
+   }
+   .plonacy_dlugopis {
+    
    }
    .mouse {
        width: 40px;
