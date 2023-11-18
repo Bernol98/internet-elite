@@ -4,6 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
+
     // Adres e-mail, na który zostanie wysłana wiadomość
     $to = "bernsjens@gmail.com";
 
@@ -18,5 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Wysyłanie maila
     mail($to, $subject, $email_body, $headers);
+
 }
 ?>
