@@ -201,7 +201,6 @@ $('nav .nav-link').on('click', function() {
     }, 1000);
   }
 });
-// Płynne przewijanie przy użyciu JavaScript
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
