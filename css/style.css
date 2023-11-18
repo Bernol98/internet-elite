@@ -9631,6 +9631,7 @@ footer img {
    }
    }
    .middle {
+    margin-top: 25%;
        position: absolute;
        top: 6%;
        left: 50%;
@@ -9736,4 +9737,41 @@ footer img {
        background-color: #666;
        color: white;
    }
-   
+/* Styl dla mobilnego menu - domyślnie ukryte dla większych ekranów */
+@media (min-width: 768px) {
+    .js-colorlib-nav-toggle.Mobilemenu {
+      display: none;
+    }
+  
+    .desktop-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 1%;
+    }
+  
+    .desktop-menu ul {
+      list-style: none;
+      display: flex;
+      width: 50%;
+      text-align: center;
+      margin-right: 8%;
+    }
+  
+    .desktop-menu li {
+      margin-right: 20px;
+      width: 100%;
+    }
+  
+    .desktop-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .desktop-menu li:hover{
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: 0.5s;
+    }
+
+  }
