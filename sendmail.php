@@ -4,9 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-
-    // Adres e-mail, na który zostanie wysłana wiadomość
-    $to = "bernsjens@gmail.com";
+    $to = "elite-admin@internet-elite.pl";
 
     // Temat wiadomości
     $subject = "Wiadomość z formularza kontaktowego";
