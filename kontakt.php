@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Internet Elite</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
@@ -123,6 +124,37 @@
             </ul>
         </div>
     </div>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = isset($_POST["name"]) ? $_POST["name"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+    $message = isset($_POST["message"]) ? $_POST["message"] : "";
+    $to = "elite-admin@internet-elite.pl";
+
+    // Sprawdź, czy wymagane pola są ustawione
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        // Temat wiadomości
+        $subject = "Wiadomość z formularza kontaktowego";
+
+        // Treść wiadomości
+        $email_body = "Imię: $name\n" . "Email: $email\n" . "Wiadomość:\n$message";
+
+        // Nagłówki
+        $headers = "From: $email";
+
+        // Wysyłanie maila
+        $mailSent = mail($to, $subject, $email_body, $headers);
+
+        if ($mailSent) {
+            echo "<p style='text-align: center; color: white;'>Mail wysłany pomślnie!</p> ";
+        } else {
+            echo "<p style='text-align: center; color: white;'>Wystąpił błąd podczas wysyłania maila.</p>";
+        }
+    } else {
+        echo "<p style='text-align: center; color: white;'>Wypełnij wszystkie wymagane pola!</p>";
+    }
+}
+?>
 
 
 
