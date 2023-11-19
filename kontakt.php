@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,20 +64,21 @@
         }
     </style>
 </head>
-<body>
+
+
 
     <div class="container">
-        <form action="sendmail.php" method="post">
-            <label for="name">Your Name:</label>
+        <form action="kontakt.php" method="post">
+            <label for="name">Imie i nazwisko:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Your Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Your Message:</label>
+            <label for="message">Wiadomość:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" name="button">
         </form>
     </div>
 
@@ -88,3 +90,40 @@
 </body>
 
 </html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+    $to = "elite-admin@internet-elite.pl";
+
+    // Temat wiadomości
+    $subject = "Wiadomość z formularza kontaktowego";
+
+    // Treść wiadomości
+    $email_body = "Imię: $name\n" . "Email: $email\n" . "Wiadomość:\n$message";
+
+    // Nagłówki
+    $headers = "From: $email";
+
+    // Wysyłanie maila
+    mail($to, $subject, $email_body, $headers);
+    echo "<p style='text-align: center; color: white;'>Mail wysłany pomślnie!</p> ";
+
+}
+?>
+<footer>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo_beta.png" alt="Logo" width="50" height="50"></a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="kontakt.php">KONTAKT</a></li>
+    </ul>
+  </nav>
+  <a href="tel:+48516619243" class="styled-button">Zadzwoń</a>
+</footer>
+<footer class="footer2">
+  <p>INTERNET ELITE 2023</p>
+</footer>
