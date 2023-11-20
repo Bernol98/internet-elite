@@ -8948,6 +8948,13 @@
        background-position: center center;
        border-radius: 1%;
    }
+.author-img {
+    opacity: 0; 
+    transition: opacity 1s ease; 
+}
+.author-img.appear {
+    opacity: 1;
+}
    .image-popup {
        cursor: -webkit-zoom-in;
        cursor: -moz-zoom-in;
