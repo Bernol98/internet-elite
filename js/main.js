@@ -216,3 +216,4 @@ document.addEventListener("DOMContentLoaded", function() {
       delayedElement.classList.add('appear');
   }, 500);
 });
+
