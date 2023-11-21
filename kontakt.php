@@ -97,10 +97,58 @@
             font-size: X-large
             
         }
+        .naglowek {
+            height: 150px;
+            
+        }
+        .colorlib-navbar-brand {
+            margin-left: 30vh;
+        }
     </style>
 </head>
 
 <body>
+<nav id="colorlib-main-nav" role="navigation">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+        <div class="js-fullheight colorlib-table">
+            <div class="colorlib-table-cell js-fullheight">
+                <div class="row no-gutters">
+                    <div class="col-md-12 text-center">
+                        <h1 class="mb-4"><a href="index.html" class="logo">Internet Elite</a></h1>
+                        <ul>
+                            <li class="active"><a href="index.html"><span><small>01</small>Home</span></a></li>
+                            <li><a href="kontakt.php"><span><small>02</small>Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="naglowek">
+        <header>
+            <div class="container1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="colorlib-navbar-brand">
+                            <a class="colorlib-logo" href="index.html">
+                                <span class="logo-img" style="background-image: url(images/logo_beta.png);"></span>
+                            </a>
+                        </div>
+                        <nav class="desktop-menu">
+                            <ul>
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="kontakt.php">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle Mobilemenu"><i></i></a>
+                    </div>
+          
+                </div>
+        
+            </div>
+      
+        </header>
+    </div>
     <div class="container">
         <form action="kontakt.php" method="post">
             <h1>Napisz do nas</h1>
@@ -119,8 +167,8 @@
         <div class="additional-info">
             <h1>ALBO</h1>
             <ul>
-                <li>Napisz maila na adres: maksym@internet-elite.pl</li>
-                <li>Zadzwoń na numer: +48 516 619 243</li>
+                <li>Napisz maila na adres:<a href="mailto:maksym@internet-elite.pl">maksym@internet-elite.pl</a></li>
+                <li>Zadzwoń na numer: <a href="tel:+48 516 619 243">+48 516 619 243</a></li>
             </ul>
         </div>
     </div>
