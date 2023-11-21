@@ -9693,9 +9693,6 @@
        left: 50%;
        transform: translate(-50%, -50%);
    }
-   .plonacy_dlugopis {
-    
-   }
    .mouse {
        width: 40px;
        height: 70px;
@@ -9884,8 +9881,9 @@
     text-align: center;
     width: 50%;
     margin-left: 25%;
-    margin-top: -35vh;
-    margin-bottom: 25vh;
+    margin-top: -25vh;
+    margin-bottom: 8vh;
+    position: relative;
 }
 .styled-button2 {
     padding: 10px 20px;
@@ -9899,9 +9897,28 @@
     background-color: #ffd700;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .styled-button2:hover {
     background-color: rgb(199, 137, 4);
     color: #ffd700;
+}
+
+@media (max-width: 768px){
+    .finish {
+        margin-top: 0;
+    }
+    .styled-button2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 280px){
+    .finish {
+        margin-top: 0;
+    }
+    .styled-button2 {
+        font-size: 14px;
+    }
 }
