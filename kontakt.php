@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
