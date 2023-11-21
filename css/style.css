@@ -7826,7 +7826,7 @@
    }
    body {
        font-family: "Poppins", Arial, sans-serif;
-       background: #000 url(../images/bg.png) no-repeat top;
+       background: #000 url(../images/bg.webp) no-repeat top;
        font-size: 18px;
        line-height: 1.8;
        font-weight: 400;
@@ -8563,6 +8563,7 @@
        font-weight: 700 !important;
        color: rgba(255, 255, 255, 0.08);
        text-transform: uppercase;
+       height: 50px;
    }
    
    @media (min-width: 992px) {
@@ -9365,7 +9366,7 @@
 
   /* Zmiana stylu przycisku po najechaniu myszką */
   .styled-button:hover {
-    background-color: #fff;
+    background-color: rgb(199, 137, 4);
     color: #ffd700;
   }
    
@@ -9879,15 +9880,28 @@
     }
 }
 
-.finish a{
-    font-size: xx-large;
+.finish {
     text-align: center;
-    margin-top: 40vh;
-    margin-left: 43%;
-    position: relative; /*relatywnie i git*/
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -35vh;
+    margin-bottom: 25vh;
 }
-@media only screen and (max-width: 768px) {
-    .finish a{
-        margin-left: 12.5vh;
-    }
+.styled-button2 {
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #ffd700;
+    color: #fff;
+    background-color: #ffd700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.styled-button2:hover {
+    background-color: rgb(199, 137, 4);
+    color: #ffd700;
 }
