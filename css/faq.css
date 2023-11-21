@@ -11,6 +11,7 @@
           align-items: flex-start;
   min-height: 100vh;
   padding: 120px 20px 40px;
+
 }
 section.faq {
   display: -webkit-box;
