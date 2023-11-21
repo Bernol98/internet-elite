@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url("images/bg.png") no-repeat center center fixed;
+            background: url("images/bg.webp") no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -208,7 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <footer class="footer" style='margin-top: 19vh;'>
         <div class="logo">
-            <a href="index.html"><img src="images/logo_beta.png" alt="Logo" width="50" height="50"></a>
+            <a href="index.html"><img src="images/logo_beta.webp" alt="Logo" width="50" height="50"></a>
         </div>
         <nav>
             <ul>
