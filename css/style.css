@@ -9879,14 +9879,12 @@
     }
 }
 
-
 .finish a{
     font-size: xx-large;
-    text-decoration: underline;
     text-align: center;
-    position: absolute;
-    margin-top: -20vh;
+    margin-top: 40vh;
     margin-left: 43%;
+    position: relative; /*relatywnie i git*/
 }
 @media only screen and (max-width: 768px) {
     .finish a{
