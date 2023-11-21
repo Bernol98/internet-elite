@@ -210,3 +210,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+      var delayedElement = document.querySelector('.author-img');
+      delayedElement.classList.add('appear');
+  }, 500);
+});
+

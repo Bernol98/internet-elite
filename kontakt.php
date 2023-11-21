@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Internet Elite</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
@@ -16,17 +17,44 @@
         }
 
         .container {
-            width: 50%;
+            display: flex;
+            flex-wrap: wrap; /* Dodane dla obsługi responsywności */
+            justify-content: space-between; /* Dodane dla rozmieszczenia elementów na końcach */
             margin: auto;
             overflow: hidden;
         }
 
+        .container h1 {
+            font: times;
+            font-size: xx-large;
+            color: yellow;
+            text-align: center;
+            width: 100%; /* Dostosowane do responsywności */
+        }
         form {
-            background: #706e6e;
-            padding: 30px;
-            margin-top: 50px;
+            background: #373737;
+            padding: 20px;
+            margin-top: 20px;
             border-radius: 4px;
             box-shadow: 0px 0px 10px 0px #000;
+            color: #fff;
+            width: 100%; /* Dostosowane do responsywności na telefonach */
+        }
+        .additional-info {
+            background: #373737;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #fff;
+            width: 100%; /* Dostosowane do responsywności na telefonach */
+        }
+
+        @media (min-width: 768px) {
+            form,
+            .additional-info {
+                width: 48%; /* Szerokość 48% na większych ekranach (komputer, laptop) */
+            }
         }
 
         label {
@@ -42,10 +70,10 @@
             padding: 8px;
             margin-bottom: 20px;
             margin-top: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #555555;
             border-radius: 4px;
             box-sizing: border-box;
-            background-color: #a5a5a5;
+            background-color: #565656;
         }
 
         input[type="submit"] {
@@ -62,13 +90,20 @@
             background-color: rgb(199, 137, 4);
             transition: 0.5s;
         }
+        .additional-info li {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: X-large
+            
+        }
     </style>
 </head>
 
-
-
+<body>
     <div class="container">
         <form action="kontakt.php" method="post">
+            <h1>Napisz do nas</h1>
             <label for="name">Imie i nazwisko:</label>
             <input type="text" id="name" name="name" required>
 
@@ -78,52 +113,67 @@
             <label for="message">Wiadomość:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <input type="submit" value="Submit" name="button">
+            <input type="submit" value="Wyślij" name="button">
         </form>
+
+        <div class="additional-info">
+            <h1>ALBO</h1>
+            <ul>
+                <li>Napisz maila na adres: maksym@internet-elite.pl</li>
+                <li>Zadzwoń na numer: +48 516 619 243</li>
+            </ul>
+        </div>
     </div>
-
-</body>
-
-</html>
-
-
-</body>
-
-</html>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+    $name = isset($_POST["name"]) ? $_POST["name"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+    $message = isset($_POST["message"]) ? $_POST["message"] : "";
     $to = "elite-admin@internet-elite.pl";
 
-    // Temat wiadomości
-    $subject = "Wiadomość z formularza kontaktowego";
+    // Sprawdź, czy wymagane pola są ustawione
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        // Temat wiadomości
+        $subject = "Wiadomość z formularza kontaktowego";
 
-    // Treść wiadomości
-    $email_body = "Imię: $name\n" . "Email: $email\n" . "Wiadomość:\n$message";
+        // Treść wiadomości
+        $email_body = "Imię: $name\n" . "Email: $email\n" . "Wiadomość:\n$message";
 
-    // Nagłówki
-    $headers = "From: $email";
+        // Nagłówki
+        $headers = "From: $email";
 
-    // Wysyłanie maila
-    mail($to, $subject, $email_body, $headers);
-    echo "<p style='text-align: center; color: white;'>Mail wysłany pomślnie!</p> ";
+        // Wysyłanie maila
+        $mailSent = mail($to, $subject, $email_body, $headers);
 
+        if ($mailSent) {
+            echo "<p style='text-align: center; color: white;'>Mail wysłany pomślnie!</p> ";
+        } else {
+            echo "<p style='text-align: center; color: white;'>Wystąpił błąd podczas wysyłania maila.</p>";
+        }
+    } else {
+        echo "<p style='text-align: center; color: white;'>Wypełnij wszystkie wymagane pola!</p>";
+    }
 }
 ?>
-<footer>
-  <div class="logo">
-    <a href="index.html"><img src="images/logo_beta.png" alt="Logo" width="50" height="50"></a>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="kontakt.php">KONTAKT</a></li>
-    </ul>
-  </nav>
-  <a href="tel:+48516619243" class="styled-button">Zadzwoń</a>
-</footer>
-<footer class="footer2">
-  <p>INTERNET ELITE 2023</p>
-</footer>
+
+
+
+    <footer class="footer" style='margin-top: 19vh;'>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo_beta.png" alt="Logo" width="50" height="50"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="kontakt.php">KONTAKT</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+48516619243" class="styled-button">Zadzwoń</a>
+    </footer>
+    <footer class="footer2" style='margin-top:0'>
+        <p>INTERNET ELITE 2023</p>
+    </footer>
+
+</body>
+
+</html>
