@@ -104,7 +104,14 @@
         .colorlib-navbar-brand {
             margin-left: 30vh;
         }
+        .col-md-12 ul li{
+            width: 25%;
+        }
+        .col-md-12 ul{
+            margin-left:28%;
+        }
     </style>
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -203,8 +210,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery-migrate-3.0.1.min.js"></script> 
+<script src="js/jquery.stellar.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+<script src="js/aos.js"></script> 
+<script src="js/scrollax.min.js"></script> 
+<script src="js/main.js"></script> 
 
     <footer class="footer" style='margin-top: 19vh;'>
         <div class="logo">
@@ -221,7 +233,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer class="footer2" style='margin-top:0'>
         <p>INTERNET ELITE 2023</p>
     </footer>
-
 </body>
 
 </html>
