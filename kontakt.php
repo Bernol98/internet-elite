@@ -104,10 +104,10 @@
         .colorlib-navbar-brand {
             margin-left: 30vh;
         }
-        .col-md-12 ul li{
+        .desktop-menu ul li{
             width: 25%;
         }
-        .col-md-12 ul{
+        .desktop-menu ul{
             margin-left:28%;
         }
     </style>
