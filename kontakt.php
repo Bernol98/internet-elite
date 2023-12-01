@@ -174,7 +174,7 @@
         <div class="additional-info">
             <h1>ALBO</h1>
             <ul>
-                <li>Napisz maila na adres:<a href="mailto:maksym@internet-elite.pl">maksym@internet-elite.pl</a></li>
+                <li>Napisz maila na adres: <a href="mailto:maksym@internet-elite.pl">maksym@internet-elite.pl</a></li>
                 <li>Zadzwoń na numer: <a href="tel:+48 516 619 243">+48 516 619 243</a></li>
             </ul>
         </div>
@@ -233,6 +233,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer class="footer2" style='margin-top:0'>
         <p>INTERNET ELITE 2023</p>
     </footer>
+<script src="js/translate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/i18next@22.4.6/dist/umd/i18next.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.1/dist/umd/i18nextBrowserLanguageDetector.js"></script>
 </body>
 
 </html>
