@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'The cost of services depends on how ambitious a task you entrust us with. We cannot charge the same for a website for a beginner local business as for a highly developed site for a large company.',
       'Czy postawimy stronę na Polskich serwerach?': 'Will we host the site on Polish servers?',
       'Oczywiście, chyba że klient woli w Niemczech albo w Anglii.':
-        'Of course, unless the client prefers in Germany or England.',
+        'Of course, unless the client prefers in any other country.',
       'Ile czasu trwa realizacja zamówienia?': 'How long does order fulfillment take?',
       'Całą stronę od zera tworzymy w maksymalnie 5 dni po dostarczeniu potrzebnych informacji. Optymalizacja dla silnika wyszukiwania max 3, a reklamy do dwóch dni.':
         'We create the entire website from scratch in a maximum of 5 days after providing the necessary information. Optimization for the search engine takes a maximum of 3 days, and ads take up to two days.',
